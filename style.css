@@ -1,5 +1,9 @@
+body{
+  background-color: black;
+}
+
 #heading{
-    color: rgb(101, 32, 32);
+    color: rgb(255, 7, 7);
     
 }
 #cart-img{
@@ -36,11 +40,12 @@
   .product h1 {
     font-size: 1.5rem;
     margin-top: 0;
+    color: whitesmoke;
   }
   
   .product h2 {
     font-size: 1.2rem;
-    color: #666;
+    color: #4c981a;
   }
   
   .product img {
@@ -55,7 +60,7 @@
   }
   
   .product button {
-    background-color: rgb(27, 27, 57);
+    background-color: rgb(143, 143, 196);
     margin: 15px;
   }
   .product button:hover {
