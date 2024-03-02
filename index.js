@@ -3,49 +3,49 @@ const products = [
     id: 1,
     name: "Samsung",
     model: "S23",
-    ImageUrl: "/s23.jpg",
+    ImageUrl: "s23.jpg",
   },
   {
     id: 2,
     name: "Apple",
     model: "i 15 pro max",
-    ImageUrl: "/i15 pro.jpg",
+    ImageUrl: "i15 pro.jpg",
   },
   {
     id: 3,
     name: "Sony",
     model: "Xperia",
-    ImageUrl: "/xperia.jpg",
+    ImageUrl: "xperia.jpg",
   },
   {
     id: 4,
     name: "Xiaomi",
     model: "note 13 pro",
-    ImageUrl: "/xiaomi.jpg",
+    ImageUrl: "xiaomi.jpg",
   },
   {
     id: 5,
     name: "One Plus",
     model: "13 pro",
-    ImageUrl: "/oneplus.jpg",
+    ImageUrl: "oneplus.jpg",
   },
   {
     id: 6,
     name: "Realme",
     model: "narzo 50",
-    ImageUrl: "/realme.jpg",
+    ImageUrl: "realme.jpg",
   },
   {
     id: 7,
     name: "Oppo",
     model: "reno 6",
-    ImageUrl: "/oppo.jpg",
+    ImageUrl: "oppo.jpg",
   },
   {
     id: 8,
     name: "Vivo",
     model: "v29e",
-    ImageUrl: "/vivo.jpg",
+    ImageUrl: "vivo.jpg",
   },
 ];
 
@@ -66,7 +66,7 @@ function searchedProducts(productsToRender) {
     productCard.innerHTML = `
             <h1>${product.name}</h1>
             <h2>${product.model}</h2>
-            <img src="${product.ImageUrl}" alt="${product.name}">
+            <img src="${product.ImageUrl}" lt="${product.name}">
             <button class="btn">Add To Cart</button>
           `;
 
