@@ -54,7 +54,8 @@ const input = document.getElementById("input");
 const cart = document.getElementById("cart");
 const p = document.getElementById("p");
 
-let count = 0; // Move the count variable outside the event listener
+let count = 0;
+let cartItems = [];
 
 function searchedProducts(productsToRender) {
   div.innerHTML = "";
@@ -68,17 +69,40 @@ function searchedProducts(productsToRender) {
             <h2>${product.model}</h2>
             <img src="${product.ImageUrl}" lt="${product.name}">
             <button class="btn">Add To Cart</button>
+            
+           
           `;
 
     div.appendChild(productCard);
 
     const button = productCard.querySelector(".btn");
     button.addEventListener("click", () => {
-      count++;
-      p.innerHTML = `<h2>${count}</h2>`;
+      const index = cartItems.indexOf(product);
+      if (index === -1) {
+        cartItems.push(product);
+        button.textContent = "Remove from Cart";
+      } else {
+        cartItems.splice(index, 1);
+        button.textContent = "Add To Cart";
+      }
+      p.innerHTML = `<h2>${cartItems.length}</h2>`;
+    });
+
+    productCard.addEventListener("mouseenter", () => {
+      button.classList.add("btns");
+    });
+
+    productCard.addEventListener("mouseleave", () => {
+      button.classList.remove("btns");
     });
   });
 }
+
+input.addEventListener("focusin", () => {
+  input.style.padding = "0 85px";
+  input.style.backgroundColor = "pink";
+  input.style.color = "black";
+});
 
 input.addEventListener("change", () => {
   const value = input.value.toLowerCase();

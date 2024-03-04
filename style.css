@@ -59,10 +59,19 @@ body{
     transform: scale(1.2); 
   }
   
-  .product button {
-    background-color: rgb(143, 143, 196);
+ .btn {
+    background-color: rgb(0, 0, 0);
     margin: 15px;
+   padding: 8px;
+   color: white;
+   visibility: hidden;
+  }
+  .btns{
+    visibility: visible;
   }
   .product button:hover {
     background-color: crimson;
+  
+    
+    
   }
