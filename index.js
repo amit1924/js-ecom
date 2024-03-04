@@ -53,6 +53,19 @@ const div = document.getElementById("div");
 const input = document.getElementById("input");
 const cart = document.getElementById("cart");
 const p = document.getElementById("p");
+const heading = document.getElementById("heading");
+
+let colorIndex = 0;
+let visibleIndex = "";
+
+setInterval(function () {
+  const colors = ["red", "orange", "yellow"];
+  const visible = ["visible", "hidden"];
+  heading.style.visibility = visible[visibleIndex];
+  visibleIndex = (visibleIndex + 1) % visible.length;
+  heading.style.color = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
+}, 1000);
 
 let count = 0;
 let cartItems = [];
